@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Wellness Tracker</name>
+    <description>App to track your wellness</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+      Mili Sanjaykumar Patel
+      Vaidehi Patel
+      Kush Patel
+      Taral Dhankecha
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+  <platform name="android">
+    <icon src="./heartbeat/mipmap-hdpi/heartbeat.png" density="hdpi" />
+    <icon src="./heartbeat/mipmap-mdpi/heartbeat.png" density="mdpi" />
+    <icon src="./heartbeat/mipmap-xhdpi/heartbeat.png" density="xhdpi" />
+    <icon src="./heartbeat/mipmap-xxhdpi/heartbeat.png" density="xxhdpi" />
+    <icon src="./heartbeat/mipmap-xxxhdpi/heartbeat.png" density="xxxhdpi" />
+  </platform>
+</widget>

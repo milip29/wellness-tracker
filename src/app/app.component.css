@@ -1,0 +1,22 @@
+/* Custom CSS for full height layout */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+  overflow: auto;
+  padding-bottom: 100px;
+  padding-top: 76px;
+}
+
+.nav-item.active .nav-link {
+  color: #007bff;
+}
+

@@ -1,0 +1,25 @@
+
+<div class="dashboard-container">
+  <h2>Activity Dashboard</h2>
+  <div *ngIf="activities.length; else noActivities">
+
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let activity of activities" [routerLink]="['/edit', activity.id]">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{ activity.name }}</div>
+          {{ activity.mood }}
+        </div>
+        <span class="badge bg-primary rounded-pill">{{ activity.date | date: 'mediumDate' }}</span>
+      </li>
+    </ol>
+
+  </div>
+  <ng-template #noActivities>
+    <div class="alert alert-warning mt-4" role="alert">
+      <h4 class="alert-heading">No activities</h4>
+      <p>Click the button below to add your first activity</p>
+      <hr>
+      <button class="btn btn-dark" [routerLink]="['/activity-log']">Add Activity</button>
+    </div>
+  </ng-template>
+</div>

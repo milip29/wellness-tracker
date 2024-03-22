@@ -1,0 +1,54 @@
+<!-- Top Bar -->
+<header class="navbar navbar-light bg-dark p-3 fixed-top">
+  <span class="navbar-brand mb-0 h1">
+    <i class="bi bi-heart-fill text-danger"></i>
+  </span>
+  <span class="text-light">Wellness Tracker</span>
+</header>
+
+<main>
+<!-- Main Content Area -->
+<div class="flex-grow-1 container mt-2">
+  <router-outlet></router-outlet>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="navbar-nav d-flex flex-row justify-content-around w-100">
+    <li class="nav-item" [class.active]="isActive('/dashboard') || isActive('/')">
+      <a class="nav-link" href="/">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <i class="bi bi-house"></i>
+          <span class="small">Home</span>
+        </div>
+      </a>
+    </li>
+
+    <li class="nav-item" [class.active]="isActive('/activity-log')">
+      <a class="nav-link" [routerLink]="['/activity-log']" >
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <i class="bi bi-calendar-check"></i>
+          <span class="small">Log</span>
+        </div>
+      </a>
+    </li>
+
+    <li class="nav-item" [class.active]="isActive('/mood-tracker')">
+      <a class="nav-link" [routerLink]="['/mood-tracker']" >
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <i class="bi bi-emoji-smile"></i>
+          <span class="small">Moody</span>
+        </div>
+      </a>
+    </li>
+
+    <li class="nav-item" [class.active]="isActive('/about')">
+      <a class="nav-link" [routerLink]="['/about']">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <i class="bi bi-info-circle"></i>
+          <span class="small">About</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</nav>

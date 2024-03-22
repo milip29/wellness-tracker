@@ -1,0 +1,22 @@
+<div class="mood-tracker-container container mt-4">
+  <h2>Mood Tracker</h2>
+  <div class="row" *ngIf="activityByMood.length; else noMoods">
+    <div class="col-md-4" *ngFor="let moodData of activityByMood">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="{{moodData.mood.icon}}" [style.color]="moodData.mood.color"></i>
+            {{ moodData.mood.name }}
+          </h5>
+          <p class="card-text">Activities: {{ moodData.getCount() }}</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]="getProgressPercentage(moodData)" [style.background-color]="moodData.mood.color"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noMoods>
+    <p>No moods to display</p>
+  </ng-template>
+</div>
